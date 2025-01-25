@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Single-page developer portfolio</title>
+</head>
+<body>
+  <header>
+    <div class="author-card">
+      <div class="nickname">adamkeyes</div>
+      <div class="tech-icons">
+        <img src="./assets/images/icon-github.svg" alt="github logo"/>
+        <img src="./assets/images/icon-frontend-mentor.svg" alt="frontend mentor logo"/>
+        <img src="./assets/images/icon-linkedin.svg" alt="linkedin logo"/>
+        <img src="./assets/images/icon-twitter.svg" alt="twitter logo"/>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="intro-area">
+      <div class="portrait">
+        <picture>
+          <source srcset="./assets/images/image-profile-desktop.webp" media="(min-width: 1000px)">
+          <source srcset="./assets/images/image-profile-tablet.webp" media="(min-width: 600px)">
+          <source srcset="./assets/images/image-profile-mobile.webp" media="(min-width: 100px)">
+          <img src="./assets/images/image-profile-mobile.webp" id="hero-image" alt="author's profile image"/>   
+        </picture>
+        <img class="circle-pattern" src="./assets/images/pattern-circle.svg" alt="circle pattern"/>
+        <img class="ring-pattern" src="./assets/images/pattern-rings.svg" alt="ring pattern"/>
+      </div>
+      <div class="narrative">
+        <h1>
+          Nice to meet you! I'm <span class="green-emp">Adam Keyes</span>.
+        </h1>
+        <p>
+          Based in the UK, I'm a front-end developer passionate about 
+          building accessible web apps that users love.
+        </p>
+        <span class="green-emp contact-link"><a href="#contact-form">Contact me</a></span>
+      </div>
+    </section>
+    <section class="skill-area">
+      <div class="skill">
+        <h2>HTML</h2>
+        4 Years Experience
+      </div>
+      <div class="skill">
+        <h2>CSS</h2>
+        4 Years Experience
+      </div>
+      <div class="skill">
+        <h2>JavaScript</h2>
+        4 Years Experience
+      </div>    
+      <div class="skill">
+        <h2>Accessibility</h2>
+        4 Years Experience
+      </div>    
+      <div class="skill">
+        <h2>React</h2>
+        3 Years Experience
+      </div>    
+      <div class="skill">
+        <h2>Sass</h2>>
+        3 Years Experience  
+      </div>        
+      <img class="ring-pattern" src="./assets/images/pattern-rings.svg" alt="ring pattern"/>
+    </section>
+    <section class="project-area">
+      <div class="project-header">
+        <h1>Projects</h1>
+        <span class="green-emp contact-link"><a href="#contact-form">Contact me</a></span>
+      </div>
+      <div class="project">
+        <picture>
+          <source srcset="./assets/images/thumbnail-project-1-small.webp" media="(min-width: 600px)">
+          <source srcset="./assets/images/thumbnail-project-1-large.webp" media="(min-width: 1000px)">
+          <img src="./assets/images/thumbnail-project-1-small.webp" alt="design portfolio project snapshot"/>
+        </picture>
+        <p class="project-name">Design portfolio</p>
+        <p class="project-skill">HTML CSS</p>
+        <div>
+          <p class="view-project green-emp">View project</p>
+          <p class="view-code green-emp">View code</p>
+        </div>
+      </div>
+      <div class="project">
+        <picture>
+          <source srcset="./assets/images/thumbnail-project-2-small.webp" media="(min-width: 600px)">
+          <source srcset="./assets/images/thumbnail-project-2-large.webp" media="(min-width: 1000px)">
+          <img src="./assets/images/thumbnail-project-2-small.webp" alt="E-learning landing page snapshot"/>
+        </picture>
+        <p class="project-name">E-learning landing page</p>
+        <p class="project-skill">HTML CSS</p>
+        <div>
+          <p class="view-project green-emp">View project</p>
+          <p class="view-code green-emp">View code</p>
+        </div>
+     </div>
+      <div class="project">
+        <picture>
+          <source srcset="./assets/images/thumbnail-project-3-small.webp" media="(min-width: 600px)">
+          <source srcset="./assets/images/thumbnail-project-3-large.webp" media="(min-width: 1000px)">
+          <img src="./assets/images/thumbnail-project-3-small.webp" alt="Todo web app snapshot"/>
+        </picture>
+        <p class="project-name">Todo web app</p>
+        <p class="project-skill">HTML CSS JavaScript</p>
+        <div>
+          <p class="view-project green-emp">View project</p>
+          <p class="view-code green-emp">View code</p>
+        </div>
+      </div>
+      <div class="project">
+        <picture>
+          <source srcset="./assets/images/thumbnail-project-4-small.webp" media="(min-width: 600px)">
+          <source srcset="./assets/images/thumbnail-project-4-large.webp" media="(min-width: 1000px)">
+          <img src="./assets/images/thumbnail-project-4-small.webp" alt="Entertainment web app snapshot"/>
+        </picture>
+        <p class="project-name">Entertainment web app</p>
+        <p class="project-skill">HTML CSS JavaScript</p>
+        <div>
+          <p class="view-project green-emp">View project</p>
+          <p class="view-code green-emp">View code</p>
+        </div>
+      </div>
+      <div class="project">
+        <picture>
+          <source srcset="./assets/images/thumbnail-project-5-small.webp" media="(min-width: 600px)">
+          <source srcset="./assets/images/thumbnail-project-5-large.webp" media="(min-width: 1000px)">
+          <img src="./assets/images/thumbnail-project-5-small.webp" alt="Memory Game app snapshot"/>
+        </picture>
+        <p class="project-name">Memory Game</p>
+        <p class="project-skill">HTML CSS JavaScript</p>
+        <div>
+          <p class="view-project green-emp">View project</p>
+          <p class="view-code green-emp">View code</p>
+        </div>
+      </div>
+      <div class="project">
+        <picture>
+          <source srcset="./assets/images/thumbnail-project-6-small.webp" media="(min-width: 600px)">
+          <source srcset="./assets/images/thumbnail-project-6-large.webp" media="(min-width: 1000px)">
+          <img src="./assets/images/thumbnail-project-6-small.webp" alt="Art gallery showcase snapshot"/>
+        </picture>
+        <p class="project-name">Art gallery showcase</p>
+        <p class="project-skill">HTML CSS JavaScript</p>
+        <div>
+          <p class="view-project green-emp">View project</p>
+          <p class="view-code green-emp">View code</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact-area">
+      <h1>Contact</h1>
+      <p>
+        I would love to hear about your project and how I could help. Please 
+        fill in the form, and I’ll get back to you as soon as possible.
+      </p>
+      <form id="contact-form" onsubmit="mysubmit(event)">
+          <input id="input-name" type="text" placeholder="NAME" required 
+            oninput="this.setCustomValidity('')">
+          <span id="input-name-err">input your name</span>
+          <input id="input-email" type="email" placeholder="EMAIL" required>
+          <span id="input-email-err">Sorry, invalid format here</span>
+          <textarea id="input-message" type="message" rows="4" placeholder="MESSAGE" required></textarea>
+          <span id="input-message-err">type in your message</span>
+        <button type="submit" class="green-emp">SEND MESSAGE</button>
+      </form>  
+      <img src="./assets/images/pattern-rings.svg" alt="ring pattern"/>
+    </section>
+  </main>
+  <footer>
+    <div class="author-card">
+      <div class="nickname text-medium">adamkeyes</div>
+      <div class="tech-icons">
+        <img src="./assets/images/icon-github.svg" alt="github logo"/>
+        <img src="./assets/images/icon-frontend-mentor.svg" alt="frontend mentor logo"/>
+        <img src="./assets/images/icon-linkedin.svg" alt="linkedin logo"/>
+        <img src="./assets/images/icon-twitter.svg" alt="twitter logo"/>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script>
+  function validate() {
+    const name = document.getElementById('input-name');
+    const email = document.getElementById('input-email');
+    const msg = document.getElementById('input-message');
+    var pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var ok = true;
+    if (name.value.length == 0) {
+      ok = false;
+      updateVisual(name, false, 'put your name, please');
+    } else {
+      updateVisual(name, true);
+    }
+    if (msg.value.length == 0) {
+      ok = false;
+      updateVisual(msg, false, 'write your message, please');
+    } else {
+      updateVisual(msg, true);
+    }
+    if(email.value.length == 0) {
+      ok = false;
+      updateVisual(email, false, 'Email cannot be empty');
+    } else if (!pattern.test(email.value)) {
+      ok = false;
+      updateVisual(email, false, 'Sorry, invalid format here');
+    } else {
+      updateVisual(email, true);
+    }
+    return ok;
+  }
+  function updateVisual(elm, ok, msg) {
+    //if(!ok) elm.value = msg;
+    // const parent = elm.parentNode;
+    // if (parent) {
+    //   const children = Array.from(parent.children);
+    //   children.forEach(e => {
+    //     if (e.tagName == "P" || e.tagName == "I") {
+    //       if (ok) e.style.display = 'none';
+    //       else e.style.display = 'block';
+    //       if(e.tagName == "P") {
+    //         e.innerText = msg;
+    //       }
+    //     }
+    //   });
+    // }
+    // if (ok) elm.style.borderColor = 'black';
+    // else elm.style.borderColor = 'red';
+  }
+
+  function mysubmit(event) {
+    console.log('submitted');
+    // var ok = validate();
+    // if (!ok || event.key == 'Enter') {
+    //   event.preventDefault();
+    // } 
+  }
+</script>
+
+</html>
