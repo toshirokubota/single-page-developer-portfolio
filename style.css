@@ -53,21 +53,16 @@ h2 {
     line-height: 40px;
     letter-spacing: -1px;
 }
-a {
+a.green-link {
+    display: inline-block;
     color: var(--lightest);
-    text-decoration: none;
-}
-
-/* header, footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-} */
-.green-emp {
-    border-bottom: solid 2pt var(--green);
+    text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-underline-offset: 1em;
+    text-decoration-thickness: 2pt;
 }
 .contact-link {
+    display: inline-block;
     text-transform: uppercase;
     padding-bottom: 0.5em;
 }
@@ -81,16 +76,16 @@ a {
 .tech-icons {
     display: block;
     height: 24px;
+    z-index: 2;
 }
 .tech-icons > img {
     padding: 0 0.5em;
 }
 
 .intro-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: -5em 0.5em 1em 0.5em;
+    margin: -5em 0.5em 2em 0.5em;
+    padding-bottom: 3em;
+    border-bottom: solid 1pt var(--lightest);
 }
 .intro-area > * {
     margin: 1em inherit;
@@ -131,7 +126,7 @@ a {
     position: relative;
     margin: 2em 0.5;
     padding: 2em 0;
-    border-top: solid 1pt var(--lightest);
+    /* border-top: solid 1pt var(--lightest); */
     border-bottom: solid 1pt var(--lightest);
 }
 .skill-area > .skill {
@@ -151,8 +146,12 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* align-content: center; */
     width: 100%;
     padding-bottom: 1em;
+}
+.project-header > * {
+    align-self: center;
 }
 .project-area > h1{
     flex: 1;
@@ -186,17 +185,26 @@ a {
     color: var(--lighter);
     word-spacing: 1.5em;
 }
-.project .view-project, .project .view-code {
-    display: inline-block;
+.project > .view-links {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+.project > .view-links > * {
+    /* display: inline-block; */
     font-size: 16px;
     letter-spacing: 2.29px;
     line-height: 26px;
-    padding-bottom: 0.5em;
-    margin: 1em 0em;
+    /* padding-bottom: 0.5em; */
 }
-.project .view-project {
+.snapshot-photo > .view-links {
+    display: none;
+}
+/* .project .view-project {
     margin-right: 2em;
-}
+} */
+/* .snapshot-photo .overlay-layer {
+} */
 .contact-area {
     position: relative;
     background-color: var(--darker);
@@ -274,6 +282,11 @@ footer > .author-card {
 } 
 
 @media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -2.05px;
+    }
     .author-card {
         font-size: 32px;
         flex-direction: row;
@@ -282,9 +295,100 @@ footer > .author-card {
         width: 100%;
     }
     .intro-area {
-        flex-direction: row-reverse;
+        position: relative;
+    }
+    #hero-image {
+        width: 38%;
+        position: relative;
+        top: 0;
+        left: 62%;
+    }
+    .portrait > img {
+        position: absolute;
+    }
+    .portrait > .circle-pattern {
+        top: 80%;
+        left: 93%;
+        z-index: 1;
+    }
+    .portrait > .ring-pattern {
+        top: 10%;
+        right: 75%;
+        z-index: -1;
+    }
+    .narrative {
+        width: 65%;
+        position: absolute;
+        bottom: 3em;
+        left: 5%;
+        text-align: left;
+    }
+    .narrative > h1 > span {
+        display: block;
+    }
+    .narrative > p {
+        font-size: 18px;
+        line-height: 28px;
+        width: 90%;
+    }
+    .skill-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .project-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+    .project-header {
+        grid-column: 1/3;
     }
 }
 @media only screen and (min-width: 1000px) {
-
+    .intro-area, .skill-area, .project-area, header {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+    h1 {
+        font-size: 88px;
+        line-height: 88px;
+        letter-spacing: -2.5px;
+    }
+    .narrative > h1 {
+        width: 710px;
+    }
+    .narrative > p {
+        width: 445px;
+    }
+    .narrative > h1 > span {
+        display: inline;
+    }
+    .snapshot-photo {
+        position: relative;
+    }
+    .project > .view-links {
+        display: none;
+    }
+    .snapshot-photo > .view-links {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        place-content: center;
+        gap: 4em;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    .snapshot-photo > .view-links:hover {
+        z-index: 2;
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .snapshot-photo > .view-links > *:hover {
+        cursor: pointer;
+        color: var(--green);
+    }
 }

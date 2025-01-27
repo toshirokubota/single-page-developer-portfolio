@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,20 @@
 
   <title>Frontend Mentor | Single-page developer portfolio</title>
 </head>
+
 <body>
   <header>
     <div class="author-card">
       <div class="nickname">adamkeyes</div>
       <div class="tech-icons">
-        <img src="./assets/images/icon-github.svg" alt="github logo"/>
-        <img src="./assets/images/icon-frontend-mentor.svg" alt="frontend mentor logo"/>
-        <img src="./assets/images/icon-linkedin.svg" alt="linkedin logo"/>
-        <img src="./assets/images/icon-twitter.svg" alt="twitter logo"/>
+        <img src="./assets/images/icon-github.svg" alt="github logo" />
+        <img src="./assets/images/icon-frontend-mentor.svg" alt="frontend mentor logo" />
+        <img src="./assets/images/icon-linkedin.svg" alt="linkedin logo" />
+        <img src="./assets/images/icon-twitter.svg" alt="twitter logo" />
       </div>
     </div>
   </header>
-  
+
   <main>
     <section class="intro-area">
       <div class="portrait">
@@ -29,20 +31,21 @@
           <source srcset="./assets/images/image-profile-desktop.webp" media="(min-width: 1000px)">
           <source srcset="./assets/images/image-profile-tablet.webp" media="(min-width: 600px)">
           <source srcset="./assets/images/image-profile-mobile.webp" media="(min-width: 100px)">
-          <img src="./assets/images/image-profile-mobile.webp" id="hero-image" alt="author's profile image"/>   
+          <img src="./assets/images/image-profile-mobile.webp" id="hero-image" alt="author's profile image" />
         </picture>
-        <img class="circle-pattern" src="./assets/images/pattern-circle.svg" alt="circle pattern"/>
-        <img class="ring-pattern" src="./assets/images/pattern-rings.svg" alt="ring pattern"/>
+        <img class="circle-pattern" src="./assets/images/pattern-circle.svg" alt="circle pattern" />
+        <img class="ring-pattern" src="./assets/images/pattern-rings.svg" alt="ring pattern" />
       </div>
       <div class="narrative">
         <h1>
-          Nice to meet you! I'm <span class="green-emp">Adam Keyes</span>.
+          <span>Nice to </span>meet you! I'm <emp class="green-emp">Adam Keyes</emp>.
         </h1>
         <p>
-          Based in the UK, I'm a front-end developer passionate about 
+          Based in the UK, I'm a front-end developer passionate about
           building accessible web apps that users love.
         </p>
-        <span class="green-emp contact-link"><a href="#contact-form">Contact me</a></span>
+        <a class="green-link" href="#contact-form">Contact me</a>
+        <!-- <span class="green-emp contact-link"><a href="#contact-form">Contact me</a></span> -->
       </div>
     </section>
     <section class="skill-area">
@@ -57,132 +60,167 @@
       <div class="skill">
         <h2>JavaScript</h2>
         4 Years Experience
-      </div>    
+      </div>
       <div class="skill">
         <h2>Accessibility</h2>
         4 Years Experience
-      </div>    
+      </div>
       <div class="skill">
         <h2>React</h2>
         3 Years Experience
-      </div>    
+      </div>
       <div class="skill">
         <h2>Sass</h2>>
-        3 Years Experience  
-      </div>        
-      <img class="ring-pattern" src="./assets/images/pattern-rings.svg" alt="ring pattern"/>
+        3 Years Experience
+      </div>
+      <img class="ring-pattern" src="./assets/images/pattern-rings.svg" alt="ring pattern" />
     </section>
     <section class="project-area">
       <div class="project-header">
         <h1>Projects</h1>
-        <span class="green-emp contact-link"><a href="#contact-form">Contact me</a></span>
+        <a class="green-link" href="#contact-form">Contact me</a>
       </div>
       <div class="project">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-1-small.webp" media="(min-width: 600px)">
-          <source srcset="./assets/images/thumbnail-project-1-large.webp" media="(min-width: 1000px)">
-          <img src="./assets/images/thumbnail-project-1-small.webp" alt="design portfolio project snapshot"/>
-        </picture>
+        <div class="snapshot-photo">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-1-small.webp" media="(min-width: 600px)">
+            <source srcset="./assets/images/thumbnail-project-1-large.webp" media="(min-width: 1000px)">
+            <img src="./assets/images/thumbnail-project-1-small.webp" alt="design portfolio project snapshot" />
+          </picture>
+          <div class="view-links">
+            <a class="view-project green-link" href="">View project</a>
+            <a class="view-project green-link" href="">View code</a>
+          </div>
+        </div>
         <p class="project-name">Design portfolio</p>
         <p class="project-skill">HTML CSS</p>
-        <div>
-          <p class="view-project green-emp">View project</p>
-          <p class="view-code green-emp">View code</p>
+        <div class="view-links">
+          <a class="view-project green-link" href="">View project</a>
+          <a class="view-project green-link" href="">View code</a>
         </div>
       </div>
       <div class="project">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-2-small.webp" media="(min-width: 600px)">
-          <source srcset="./assets/images/thumbnail-project-2-large.webp" media="(min-width: 1000px)">
-          <img src="./assets/images/thumbnail-project-2-small.webp" alt="E-learning landing page snapshot"/>
-        </picture>
+        <div class="snapshot-photo">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-2-small.webp" media="(min-width: 600px)">
+            <source srcset="./assets/images/thumbnail-project-2-large.webp" media="(min-width: 1000px)">
+            <img src="./assets/images/thumbnail-project-2-small.webp" alt="E-learning landing page snapshot" />
+          </picture>
+          <div class="view-links">
+            <a class="view-project green-link" href="">View project</a>
+            <a class="view-project green-link" href="">View code</a>
+            </div>
+        </div>
         <p class="project-name">E-learning landing page</p>
         <p class="project-skill">HTML CSS</p>
-        <div>
-          <p class="view-project green-emp">View project</p>
-          <p class="view-code green-emp">View code</p>
+        <div class="view-links">
+          <a class="view-project green-link" href="">View project</a>
+          <a class="view-project green-link" href="">View code</a>
         </div>
-     </div>
+      </div>
       <div class="project">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-3-small.webp" media="(min-width: 600px)">
-          <source srcset="./assets/images/thumbnail-project-3-large.webp" media="(min-width: 1000px)">
-          <img src="./assets/images/thumbnail-project-3-small.webp" alt="Todo web app snapshot"/>
-        </picture>
+        <div class="snapshot-photo">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-3-small.webp" media="(min-width: 600px)">
+            <source srcset="./assets/images/thumbnail-project-3-large.webp" media="(min-width: 1000px)">
+            <img src="./assets/images/thumbnail-project-3-small.webp" alt="Todo web app snapshot" />
+          </picture>
+          <div class="view-links">
+            <a class="view-project green-link" href="">View project</a>
+            <a class="view-project green-link" href="">View code</a>
+          </div>
+        </div>
         <p class="project-name">Todo web app</p>
         <p class="project-skill">HTML CSS JavaScript</p>
-        <div>
-          <p class="view-project green-emp">View project</p>
-          <p class="view-code green-emp">View code</p>
+        <div class="view-links">
+          <a class="view-project green-link" href="">View project</a>
+          <a class="view-project green-link" href="">View code</a>
         </div>
       </div>
       <div class="project">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-4-small.webp" media="(min-width: 600px)">
-          <source srcset="./assets/images/thumbnail-project-4-large.webp" media="(min-width: 1000px)">
-          <img src="./assets/images/thumbnail-project-4-small.webp" alt="Entertainment web app snapshot"/>
-        </picture>
+        <div class="snapshot-photo">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-4-small.webp" media="(min-width: 600px)">
+            <source srcset="./assets/images/thumbnail-project-4-large.webp" media="(min-width: 1000px)">
+            <img src="./assets/images/thumbnail-project-4-small.webp" alt="Entertainment web app snapshot" />
+          </picture>
+          <div class="view-links">
+            <a class="view-project green-link" href="">View project</a>
+            <a class="view-project green-link" href="">View code</a>
+            </div>
+        </div>
         <p class="project-name">Entertainment web app</p>
         <p class="project-skill">HTML CSS JavaScript</p>
-        <div>
-          <p class="view-project green-emp">View project</p>
-          <p class="view-code green-emp">View code</p>
+        <div class="view-links">
+          <a class="view-project green-link" href="">View project</a>
+          <a class="view-project green-link" href="">View code</a>
         </div>
       </div>
       <div class="project">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-5-small.webp" media="(min-width: 600px)">
-          <source srcset="./assets/images/thumbnail-project-5-large.webp" media="(min-width: 1000px)">
-          <img src="./assets/images/thumbnail-project-5-small.webp" alt="Memory Game app snapshot"/>
-        </picture>
+        <div class="snapshot-photo">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-5-small.webp" media="(min-width: 600px)">
+            <source srcset="./assets/images/thumbnail-project-5-large.webp" media="(min-width: 1000px)">
+            <img src="./assets/images/thumbnail-project-5-small.webp" alt="Memory Game app snapshot" />
+          </picture>
+          <div class="view-links">
+            <a class="view-project green-link" href="">View project</a>
+            <a class="view-project green-link" href="">View code</a>
+            </div>
+        </div>
         <p class="project-name">Memory Game</p>
         <p class="project-skill">HTML CSS JavaScript</p>
-        <div>
-          <p class="view-project green-emp">View project</p>
-          <p class="view-code green-emp">View code</p>
+        <div class="view-links">
+          <a class="view-project green-link" href="">View project</a>
+          <a class="view-project green-link" href="">View code</a>
         </div>
       </div>
       <div class="project">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-6-small.webp" media="(min-width: 600px)">
-          <source srcset="./assets/images/thumbnail-project-6-large.webp" media="(min-width: 1000px)">
-          <img src="./assets/images/thumbnail-project-6-small.webp" alt="Art gallery showcase snapshot"/>
-        </picture>
+        <div class="snapshot-photo">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-6-small.webp" media="(min-width: 600px)">
+            <source srcset="./assets/images/thumbnail-project-6-large.webp" media="(min-width: 1000px)">
+            <img src="./assets/images/thumbnail-project-6-small.webp" alt="Art gallery showcase snapshot" />
+          </picture>
+          <div class="view-links">
+            <a class="view-project green-link" href="">View project</a>
+            <a class="view-project green-link" href="">View code</a>
+            </div>
+        </div>
         <p class="project-name">Art gallery showcase</p>
         <p class="project-skill">HTML CSS JavaScript</p>
-        <div>
-          <p class="view-project green-emp">View project</p>
-          <p class="view-code green-emp">View code</p>
+        <div class="view-links">
+          <a class="view-project green-link" href="">View project</a>
+          <a class="view-project green-link" href="">View code</a>
         </div>
       </div>
     </section>
     <section class="contact-area">
       <h1>Contact</h1>
       <p>
-        I would love to hear about your project and how I could help. Please 
+        I would love to hear about your project and how I could help. Please
         fill in the form, and I’ll get back to you as soon as possible.
       </p>
       <form id="contact-form" onsubmit="mysubmit(event)">
-          <input id="input-name" type="text" placeholder="NAME" required 
-            oninput="this.setCustomValidity('')">
-          <span id="input-name-err">input your name</span>
-          <input id="input-email" type="email" placeholder="EMAIL" required>
-          <span id="input-email-err">Sorry, invalid format here</span>
-          <textarea id="input-message" type="message" rows="4" placeholder="MESSAGE" required></textarea>
-          <span id="input-message-err">type in your message</span>
+        <input id="input-name" type="text" placeholder="NAME" required oninput="this.setCustomValidity('')">
+        <span id="input-name-err">input your name</span>
+        <input id="input-email" type="email" placeholder="EMAIL" required>
+        <span id="input-email-err">Sorry, invalid format here</span>
+        <textarea id="input-message" type="message" rows="4" placeholder="MESSAGE" required></textarea>
+        <span id="input-message-err">type in your message</span>
         <button type="submit" class="green-emp">SEND MESSAGE</button>
-      </form>  
-      <img src="./assets/images/pattern-rings.svg" alt="ring pattern"/>
+      </form>
+      <img src="./assets/images/pattern-rings.svg" alt="ring pattern" />
     </section>
   </main>
   <footer>
     <div class="author-card">
       <div class="nickname text-medium">adamkeyes</div>
       <div class="tech-icons">
-        <img src="./assets/images/icon-github.svg" alt="github logo"/>
-        <img src="./assets/images/icon-frontend-mentor.svg" alt="frontend mentor logo"/>
-        <img src="./assets/images/icon-linkedin.svg" alt="linkedin logo"/>
-        <img src="./assets/images/icon-twitter.svg" alt="twitter logo"/>
+        <img src="./assets/images/icon-github.svg" alt="github logo" />
+        <img src="./assets/images/icon-frontend-mentor.svg" alt="frontend mentor logo" />
+        <img src="./assets/images/icon-linkedin.svg" alt="linkedin logo" />
+        <img src="./assets/images/icon-twitter.svg" alt="twitter logo" />
       </div>
     </div>
   </footer>
@@ -208,7 +246,7 @@
     } else {
       updateVisual(msg, true);
     }
-    if(email.value.length == 0) {
+    if (email.value.length == 0) {
       ok = false;
       updateVisual(email, false, 'Email cannot be empty');
     } else if (!pattern.test(email.value)) {
