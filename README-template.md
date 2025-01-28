@@ -107,6 +107,17 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
+- CSS filter generator to convert from black to target hex color
+https://codepen.io/sosuke/pen/Pjoqqp
+
+- input validation example
+https://stackoverflow.com/questions/72521054/error-message-displayed-even-with-valid-inputs
+
+- Form INPUT ERROR MESSAGES with ONLY CSS
+https://www.youtube.com/watch?v=P6djqwBKR-k
+https://codepen.io/Dillion/pen/gOZrQga
+
+
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments

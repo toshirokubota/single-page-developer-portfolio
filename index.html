@@ -44,8 +44,7 @@
           Based in the UK, I'm a front-end developer passionate about
           building accessible web apps that users love.
         </p>
-        <a class="green-link" href="#contact-form">Contact me</a>
-        <!-- <span class="green-emp contact-link"><a href="#contact-form">Contact me</a></span> -->
+        <a class="green-link contact-link" href="#contact-form">Contact me</a>
       </div>
     </section>
     <section class="skill-area">
@@ -78,7 +77,7 @@
     <section class="project-area">
       <div class="project-header">
         <h1>Projects</h1>
-        <a class="green-link" href="#contact-form">Contact me</a>
+        <a class="green-link contact-link" href="#contact-form">Contact me</a>
       </div>
       <div class="project">
         <div class="snapshot-photo">
@@ -196,26 +195,31 @@
       </div>
     </section>
     <section class="contact-area">
-      <h1>Contact</h1>
-      <p>
-        I would love to hear about your project and how I could help. Please
-        fill in the form, and I’ll get back to you as soon as possible.
-      </p>
+      <div class="contact-area-header">
+        <h1>Contact</h1>
+        <p>
+          I would love to hear about your project and how I could help. Please
+          fill in the form, and I’ll get back to you as soon as possible.
+        </p>
+      </div>
       <form id="contact-form" onsubmit="mysubmit(event)">
         <input id="input-name" type="text" placeholder="NAME" required oninput="this.setCustomValidity('')">
-        <span id="input-name-err">input your name</span>
-        <input id="input-email" type="email" placeholder="EMAIL" required>
-        <span id="input-email-err">Sorry, invalid format here</span>
+        <span class="input-err input-name-err">input your name</span>
+        <div class="email-area">
+          <input id="input-email" type="email" placeholder="EMAIL" required>
+          <span class="input-err exclamation">!</span>
+        </div>
+        <span class="input-err input-email-err">Sorry, invalid format here</span>
         <textarea id="input-message" type="message" rows="4" placeholder="MESSAGE" required></textarea>
-        <span id="input-message-err">type in your message</span>
-        <button type="submit" class="green-emp">SEND MESSAGE</button>
+        <span class="input-err input-message-err">type in your message</span>
+        <button type="submit" class="green-link">SEND MESSAGE</button>
       </form>
-      <img src="./assets/images/pattern-rings.svg" alt="ring pattern" />
+      <!-- <img src="./assets/images/pattern-rings.svg" alt="ring pattern" /> -->
     </section>
   </main>
   <footer>
     <div class="author-card">
-      <div class="nickname text-medium">adamkeyes</div>
+      <div class="nickname">adamkeyes</div>
       <div class="tech-icons">
         <img src="./assets/images/icon-github.svg" alt="github logo" />
         <img src="./assets/images/icon-frontend-mentor.svg" alt="frontend mentor logo" />
@@ -228,53 +232,66 @@
 </body>
 
 <script>
-  function validate() {
-    const name = document.getElementById('input-name');
-    const email = document.getElementById('input-email');
-    const msg = document.getElementById('input-message');
-    var pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    var ok = true;
-    if (name.value.length == 0) {
-      ok = false;
-      updateVisual(name, false, 'put your name, please');
-    } else {
-      updateVisual(name, true);
+  const validate = function() {
+    const firstNameField = document.getElementById("firstName");
+    const lastNameField = document.getElementById("lastName");
+    const pattern = /^[A-Za-z]{3}[A-Za-z]*$/;
+
+    let valid = true;
+    if (!firstNameField.value.match(pattern)) {
+      const nameError = document.getElementById("nameError");
+      nameError.classList.add("visible");
+      firstNameField.classList.add("invalid");
+      nameError.setAttribute('aria-hidden', false);
+      nameError.setAttribute('aria-invalid', true);
+
+      valid = false;
+
     }
-    if (msg.value.length == 0) {
-      ok = false;
-      updateVisual(msg, false, 'write your message, please');
-    } else {
-      updateVisual(msg, true);
+    if (!lastNameField.value.match(pattern)) {
+
+      const lastNameError = document.getElementById("lastNameError");
+      lastNameError.classList.add("visible");
+      lastNameField.classList.add("invalid");
+      lastNameError.setAttribute('aria-hidden', false);
+      lastNameError.setAttribute('aria-invalid', true);
+
+      valid = false;
+
     }
-    if (email.value.length == 0) {
-      ok = false;
-      updateVisual(email, false, 'Email cannot be empty');
-    } else if (!pattern.test(email.value)) {
-      ok = false;
-      updateVisual(email, false, 'Sorry, invalid format here');
-    } else {
-      updateVisual(email, true);
-    }
-    return ok;
+
+    return valid;
   }
-  function updateVisual(elm, ok, msg) {
-    //if(!ok) elm.value = msg;
-    // const parent = elm.parentNode;
-    // if (parent) {
-    //   const children = Array.from(parent.children);
-    //   children.forEach(e => {
-    //     if (e.tagName == "P" || e.tagName == "I") {
-    //       if (ok) e.style.display = 'none';
-    //       else e.style.display = 'block';
-    //       if(e.tagName == "P") {
-    //         e.innerText = msg;
-    //       }
-    //     }
-    //   });
-    // }
-    // if (ok) elm.style.borderColor = 'black';
-    // else elm.style.borderColor = 'red';
-  }
+
+  // function validate() {
+  //   const name = document.getElementById('input-name');
+  //   const email = document.getElementById('input-email');
+  //   const msg = document.getElementById('input-message');
+  //   var pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  //   var ok = true;
+  //   if (name.value.length == 0) {
+  //     ok = false;
+  //     updateVisual(name, false, 'put your name, please');
+  //   } else {
+  //     updateVisual(name, true);
+  //   }
+  //   if (msg.value.length == 0) {
+  //     ok = false;
+  //     updateVisual(msg, false, 'write your message, please');
+  //   } else {
+  //     updateVisual(msg, true);
+  //   }
+  //   if (email.value.length == 0) {
+  //     ok = false;
+  //     updateVisual(email, false, 'Email cannot be empty');
+  //   } else if (!pattern.test(email.value)) {
+  //     ok = false;
+  //     updateVisual(email, false, 'Sorry, invalid format here');
+  //   } else {
+  //     updateVisual(email, true);
+  //   }
+  //   return ok;
+  // }
 
   function mysubmit(event) {
     console.log('submitted');
