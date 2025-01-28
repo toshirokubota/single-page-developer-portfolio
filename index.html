@@ -203,18 +203,21 @@
         </p>
       </div>
       <form id="contact-form" onsubmit="mysubmit(event)">
-        <input id="input-name" type="text" placeholder="NAME" required oninput="this.setCustomValidity('')">
-        <span class="input-err input-name-err">input your name</span>
-        <div class="email-area">
-          <input id="input-email" type="email" placeholder="EMAIL" required>
-          <span class="input-err exclamation">!</span>
+        <div class="input-group">
+          <input id="input-name" type="text" placeholder="NAME" minlength="3">
+          <span class="input-err">input your name (3 chars minimum)</span>
         </div>
-        <span class="input-err input-email-err">Sorry, invalid format here</span>
-        <textarea id="input-message" type="message" rows="4" placeholder="MESSAGE" required></textarea>
-        <span class="input-err input-message-err">type in your message</span>
+        <div class="input-group">
+          <input id="input-email" type="email" placeholder="EMAIL">
+          <span class="input-err exclamation">!</span>
+          <span class="input-err input-email-err">Sorry, invalid format here</span>
+        </div>
+        <div class="input-group">
+          <textarea id="input-message" type="message" rows="4" placeholder="MESSAGE" minlength="10"></textarea>
+          <span class="input-err input-message-err">type in your message (10 chars minimum)</span>
+        </div>
         <button type="submit" class="green-link">SEND MESSAGE</button>
       </form>
-      <!-- <img src="./assets/images/pattern-rings.svg" alt="ring pattern" /> -->
     </section>
   </main>
   <footer>

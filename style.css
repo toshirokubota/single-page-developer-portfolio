@@ -232,8 +232,7 @@ h2 {
     display: flex;
     flex-direction: column;
 }
-#contact-form input, #contact-form > textarea, #contact-form > button   {
-    /* background-color: var(--darker); */
+#contact-form input, #contact-form textarea, #contact-form button   {
     background: transparent;
     outline: none;
     border-top: none;
@@ -242,38 +241,33 @@ h2 {
     margin-top: 2em;
     padding: 0.5em 1em;
     color: var(--lighter);
-    z-index: 1;
+    /* z-index: 1; */
 }
-#contact-form input:not(:placeholder-shown):valid,
-#contact-form textarea:not(:placeholder-shown):valid {
-    border-color: var(--green);
+#contact-form input, #contact-form textarea {
+    display: block;
+    width: 100%;
 }
-#contact-form input:not(:placeholder-shown):invalid,
-#contact-form textarea:not(:placeholder-shown):invalid {
-    border-color: var(--redish);
+.input-group {
+    position: relative;
+    width: 100%;
 }
 .input-err {
+    display: block;
     font-size: 12px;
     color: var(--redish);
     margin-left: auto;
-}
-#contact-form input:placeholder-shown + .input-err
-#contact-form input:not(:placeholder-shown):valid + .input-err {
     visibility: hidden;
 }
-#contact-form input:not(:placeholder-shown):invalid + .input-err {
-    visibility: visible;
+.input-err.exclamation {
+    display: block;
+    position: absolute;
+    bottom: 1.5em;
+    right: 0%;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 0.75em;
+    border: solid 1pt var(--redish);
 }
-#contact-form textarea > .input-err, 
-#contact-form textarea:not(:placeholder-shown):valid + .input-err {
-    visibility: hidden;
-}
-#contact-form textarea:not(:placeholder-shown):invalid + .input-err {
-    visibility: visible;
-}
-/* #contact-form input:focus, #contact-form input:hover{
-    outline: none;
-} */
 #contact-form button {
     padding: 0.5em 0;
     width: 8em;
@@ -282,30 +276,40 @@ h2 {
     background-color: transparent;
     border-bottom: none;
 }
+/* error indication */
+.input-group > input:not(:focus):not(:placeholder-shown):valid {
+    border-color: var(--green);
+}
+.input-group > input:not(:focus):not(:placeholder-shown):invalid {
+    border-color: var(--redish);
+}
+.input-group > input:not(:focus):not(:placeholder-shown):invalid ~ .input-err {
+    visibility: visible;
+}
+.input-group > textarea:not(:focus):not(:placeholder-shown):valid {
+    border-color: var(--green);
+}
+.input-group > textarea:not(:focus):not(:placeholder-shown):invalid {
+    border-color: var(--redish);
+}
+.input-group > textarea:not(:focus):not(:placeholder-shown):invalid ~ .input-err {
+    visibility: visible;
+}
+
 #contact-form button:focus, #contact-form button:hover{
     cursor: pointer;
 }
-.contact-area > img {
+/* .contact-area > img {
     position: absolute;
     bottom: 5%;
     right: 50%;
-}
-#contact-form .email-area {
+} */
+/* #contact-form .email-area {
     position: relative;
 }
 #contact-form .email-area > input{
     width: 100%;
-}
-.input-err.exclamation {
-    display: block;
-    position: absolute;
-    bottom: 0.5em;
-    right: 0%;
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 0.75em;
-    border: solid 1pt var(--redish);
-}
+} */
 footer {
     background-color: var(--darker);
 }
