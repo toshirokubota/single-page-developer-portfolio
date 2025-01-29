@@ -21,18 +21,6 @@
     margin: 0;
     padding: 0;
 }
-/* .headingXL {
-    font-size: 88px;
-    line-height: 88px;
-    letter-spacing: -2.5px;
-    font-family: bold;
-}
-.headingL {
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: -1.5px;
-    font-family: bold;
-} */
 .headingM {
     font-size: 24px;
     font-weight: bold;
@@ -48,9 +36,12 @@
     font-weight:normal;
     line-height: 28px;
 }
-/*.centered-text {
-    text-align: center;
-}*/
+.lighter {
+    color: var(--lighter);
+}
+.lightest {
+    color: var(--lightest);
+}
 body {
     background-color: var(--darkest);
 }
@@ -68,9 +59,9 @@ h2 {
     line-height: 40px;
     letter-spacing: -1px;
 }
-.green-link {
-    display: inline-block;
-    color: var(--lightest);
+.green-emp {
+    /* display: inline-block; */
+    /* color: var(--lightest); */
     text-decoration: underline;
     text-decoration-color: var(--green);
     text-underline-offset: 1.2rem;
@@ -135,8 +126,8 @@ h2 {
 .narrative {
     text-align: center;
 }
-.narrative > * {
-    margin: 1em 0;
+.narrative > p {
+    margin: 2em 0 1.5em 0;
 }
 
 .skill-area {
@@ -191,14 +182,12 @@ h2 {
 .project img {
     width: 100%;
 }
-.project > .project-name {
-    /* font-size: 24px;
-    line-height: 32px; */
+/* .project > .project-name {
     color: var(--lightest);
-}
+} */
 .project > .project-skill {
     /* font-size: 18px; */
-    color: var(--lighter);
+    /* color: var(--lighter); */
     word-spacing: 1.5em;
 }
 .project > .view-links {
@@ -223,7 +212,7 @@ h2 {
     padding: 3em 0.5em;
     text-align: center;
     background: var(--darker) url('./assets/images/pattern-rings.svg') no-repeat;
-    background-position: right 180px bottom;
+    background-position: right 180px bottom 50px;
 }
 .contact-area > * {
     margin: 1rem 0;
@@ -237,22 +226,29 @@ h2 {
 }
 #contact-form input, #contact-form textarea, #contact-form button   {
     background: transparent;
-    outline: none;
     border-top: none;
     border-left: none;
     border-right: none;
     margin-top: 2em;
-    padding: 0.5em 1em;
-    color: var(--lighter);
+    outline: none;
+    /* color: var(--lighter); */
     /* z-index: 1; */
 }
 #contact-form input, #contact-form textarea {
-    display: block;
+    /* display: block; */
+    padding: 0.5em 1em;
     width: 100%;
+}
+#contact-form button {
+    padding: 0.5em 0;
+    width: 8em;
+    margin-left: auto;
+    /* background-color: transparent; */
+    border-bottom: none;
 }
 .input-group {
     position: relative;
-    width: 100%;
+    /* width: 100%; */
 }
 .input-err {
     display: block;
@@ -271,14 +267,6 @@ h2 {
     height: 1.5em;
     border-radius: 0.75em;
     border: solid 1pt var(--redish);
-}
-#contact-form button {
-    padding: 0.5em 0;
-    width: 8em;
-    margin-left: auto;
-    color: var(--lighter);
-    background-color: transparent;
-    border-bottom: none;
 }
 /* error indication */
 .input-group > input:not(:placeholder-shown):valid {
@@ -346,7 +334,7 @@ footer > .author-card {
     .intro-area {
         position: relative;
     }
-    .intro-area, .skill-area, .project-area, header {
+    .skill-area, .project-area, header {
         margin-left: 1em;
         margin-right: 1em;
     }
@@ -365,7 +353,7 @@ footer > .author-card {
         z-index: 1;
     }
     .portrait > .ring-pattern {
-        top: 10%;
+        top: 20%;
         left: -35%;
         z-index: -1;
     }
@@ -375,6 +363,7 @@ footer > .author-card {
         bottom: 3em;
         /* left: 5%; */
         text-align: left;
+        margin-left: 1em;
     }
     .narrative > h1 > span {
         display: block;
@@ -419,9 +408,26 @@ footer > .author-card {
         line-height: 88px;
         letter-spacing: -2.5px;
     }
-
+    .portrait > .circle-pattern {
+        top: 70%;
+        left: 50%;
+        z-index: 1;
+    }
+    .portrait > .ring-pattern {
+        top: 20%;
+        left: -20%;
+        z-index: -1;
+    }
+    .narrative {
+        bottom: 15em;
+        margin-left: 0;
+    }
     .narrative > h1 > span {
         display: inline;
+    }
+    .narrative > p {
+        width: 60%;
+        padding-bottom: 1em;
     }
     .project-photo {
         position: relative;
