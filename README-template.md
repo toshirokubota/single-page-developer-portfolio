@@ -66,6 +66,22 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+- using background to embed an image
+
+- form validation with css
+
+- disabling/enabling button only when all input elements are valid
+
+- changing the color of icons
+
+- incorporating background patterns was not consistent 
+
+- inserting an exclamation icon in one of input boxes was ad-hoc
+
+- positioning of images was not confusing and still not clear
+
+
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:

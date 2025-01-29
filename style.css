@@ -21,7 +21,7 @@
     margin: 0;
     padding: 0;
 }
-.headingXL {
+/* .headingXL {
     font-size: 88px;
     line-height: 88px;
     letter-spacing: -2.5px;
@@ -32,20 +32,25 @@
     line-height: 56px;
     letter-spacing: -1.5px;
     font-family: bold;
-}
+} */
 .headingM {
     font-size: 24px;
     font-weight: bold;
     line-height: 32px;
 }
 .bodyM {
+    font-size: 16px;
+    font-weight:normal;
+    line-height: 26px;
+}
+.bodyL {
     font-size: 18px;
     font-weight:normal;
     line-height: 28px;
 }
-.centered-text {
+/*.centered-text {
     text-align: center;
-}
+}*/
 body {
     background-color: var(--darkest);
 }
@@ -68,42 +73,42 @@ h2 {
     color: var(--lightest);
     text-decoration: underline;
     text-decoration-color: var(--green);
-    text-underline-offset: 1em;
+    text-underline-offset: 1.2rem;
     text-decoration-thickness: 2pt;
 }
-.contact-link {
-    /* display: inline-block; */
+/* .contact-link {
     text-transform: uppercase;
-    /* padding-bottom: 0.5em; */
+} */
+.uppercase {
+    text-transform: uppercase;
 }
 .author-card {
     display: flex;
     flex-direction: column;
     font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.33px;
+    line-height: 32px;
     align-items: center;
     gap: 1em;
 }
 .tech-icons {
     display: block;
-    height: 24px;
+    height: 1.0em;
     z-index: 2;
 }
 .tech-icons > img {
-    padding: 0 0.5em;
+    padding: 0 0.2em;
 }
 .tech-icons > img:hover, .tech-icons > img:focus {
     cursor: pointer;
     filter: invert(15%) sepia(10%) saturate(2427%) hue-rotate(92deg) brightness(94%) contrast(86%);
-    /* filter: invert(5%) sepia(22%) saturate(3953%) hue-rotate(48deg) brightness(120%) contrast(100%);} */
 }
 
 .intro-area {
     margin: -5em 0.5em 2em 0.5em;
     padding-bottom: 3em;
     border-bottom: solid 1pt var(--lightest);
-}
-.intro-area > * {
-    margin: 1em inherit;
 }
 .portrait {
     position: relative;
@@ -132,9 +137,6 @@ h2 {
 }
 .narrative > * {
     margin: 1em 0;
-}
-.narrative > p {
-    padding: 0 0.5em;
 }
 
 .skill-area {
@@ -178,30 +180,31 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: start;
+    gap: 0.5em;
 }
 .project {
-    margin: 1.5em 0em;
+    margin: 3em 0em;
 }
-.project > * {
+/* .project > * {
     text-transform: uppercase;
-}
+} */
 .project img {
     width: 100%;
 }
 .project > .project-name {
-    font-size: 24px;
-    line-height: 32px;
+    /* font-size: 24px;
+    line-height: 32px; */
     color: var(--lightest);
-    margin: 0.5em 0em;
 }
 .project > .project-skill {
-    font-size: 18px;
+    /* font-size: 18px; */
     color: var(--lighter);
     word-spacing: 1.5em;
 }
 .project > .view-links {
     display: flex;
     flex-direction: row;
+    padding: 0.5em 0;
     gap: 3em;
 }
 .project > .view-links > * {
@@ -211,22 +214,22 @@ h2 {
     line-height: 26px;
     /* padding-bottom: 0.5em; */
 }
-.snapshot-photo > .view-links {
+.project-photo > .view-links {
     display: none;
 }
 .contact-area {
     position: relative;
     background-color: var(--darker);
-    padding: 5em 0.5em;
+    padding: 3em 0.5em;
     text-align: center;
     background: var(--darker) url('./assets/images/pattern-rings.svg') no-repeat;
     background-position: right 180px bottom;
 }
-.contact-area > h1 {
-    margin-top: 1em;
+.contact-area > * {
+    margin: 1rem 0;
 }
-.contact-area > p {
-    margin: 1em 0em;
+.contact-area-header > * {
+    margin: 1rem 0;
 }
 .contact-area > form {
     display: flex;
@@ -255,12 +258,13 @@ h2 {
     display: block;
     font-size: 12px;
     color: var(--redish);
-    margin-left: auto;
+    text-align: right;
     visibility: hidden;
 }
 .input-err.exclamation {
     display: block;
     position: absolute;
+    text-align: center;
     bottom: 1.5em;
     right: 0%;
     width: 1.5em;
@@ -277,39 +281,33 @@ h2 {
     border-bottom: none;
 }
 /* error indication */
-.input-group > input:not(:focus):not(:placeholder-shown):valid {
+.input-group > input:not(:placeholder-shown):valid {
     border-color: var(--green);
 }
-.input-group > input:not(:focus):not(:placeholder-shown):invalid {
+.input-group > input:not(:placeholder-shown):invalid {
     border-color: var(--redish);
 }
-.input-group > input:not(:focus):not(:placeholder-shown):invalid ~ .input-err {
+.input-group > input:not(:placeholder-shown):invalid ~ .input-err {
     visibility: visible;
 }
-.input-group > textarea:not(:focus):not(:placeholder-shown):valid {
+.input-group > textarea:not(:placeholder-shown):valid {
     border-color: var(--green);
 }
-.input-group > textarea:not(:focus):not(:placeholder-shown):invalid {
+.input-group > textarea:not(:placeholder-shown):invalid {
     border-color: var(--redish);
 }
-.input-group > textarea:not(:focus):not(:placeholder-shown):invalid ~ .input-err {
+.input-group > textarea:not(:placeholder-shown):invalid ~ .input-err {
     visibility: visible;
 }
-
-#contact-form button:focus, #contact-form button:hover{
+/* .input-group > input:not(:placeholder-shown):valid .input-group > textarea:not(:placeholder-shown):valid .input-group > button {
+    cursor: not-allowed;
+} */
+#contact-form button:disabled {
+    cursor:auto;
+}
+#contact-form button:not(:disabled):focus, #contact-form button:not(:disabled):hover{
     cursor: pointer;
 }
-/* .contact-area > img {
-    position: absolute;
-    bottom: 5%;
-    right: 50%;
-} */
-/* #contact-form .email-area {
-    position: relative;
-}
-#contact-form .email-area > input{
-    width: 100%;
-} */
 footer {
     background-color: var(--darker);
 }
@@ -320,27 +318,43 @@ footer > .author-card {
     border-top: solid 2pt var(--lighter);
 } 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     h1 {
         font-size: 72px;
         line-height: 72px;
         letter-spacing: -2.05px;
     }
+    h2 {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -1.5px;
+    }
+    .bodyM {
+        font-size: 18px;
+        font-weight:normal;
+        line-height: 28px;
+    }
     .author-card {
         font-size: 32px;
+        letter-spacing: -0.44px;
+        line-height: 32px;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1em;
+        padding: 1em 0;
         width: 100%;
     }
     .intro-area {
         position: relative;
     }
+    .intro-area, .skill-area, .project-area, header {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
     #hero-image {
-        width: 38%;
+        width: 45%;
         position: relative;
         top: 0;
-        left: 62%;
+        left: 55%;
     }
     .portrait > img {
         position: absolute;
@@ -359,7 +373,7 @@ footer > .author-card {
         width: 65%;
         position: absolute;
         bottom: 3em;
-        left: 5%;
+        /* left: 5%; */
         text-align: left;
     }
     .narrative > h1 > span {
@@ -395,7 +409,7 @@ footer > .author-card {
         background-position: left -365px bottom;
     }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     .intro-area, .skill-area, .project-area, header {
         margin-left: 10rem;
         margin-right: 10rem;
@@ -405,16 +419,11 @@ footer > .author-card {
         line-height: 88px;
         letter-spacing: -2.5px;
     }
-    .narrative > h1 {
-        width: 710px;
-    }
-    .narrative > p {
-        width: 445px;
-    }
+
     .narrative > h1 > span {
         display: inline;
     }
-    .snapshot-photo {
+    .project-photo {
         position: relative;
     }
     .skill-area {
@@ -423,7 +432,7 @@ footer > .author-card {
     .project > .view-links {
         display: none;
     }
-    .snapshot-photo > .view-links {
+    .project-photo > .view-links {
         display:flex;
         flex-direction: column;
         align-items: center;
@@ -436,12 +445,12 @@ footer > .author-card {
         height: 100%;
         opacity: 0;
     }
-    .snapshot-photo > .view-links:hover {
+    .project-photo > .view-links:hover {
         z-index: 2;
         opacity: 1;
         background-color: rgba(0, 0, 0, 0.7);
     }
-    .snapshot-photo > .view-links > *:hover {
+    .project-photo > .view-links > *:hover {
         cursor: pointer;
         color: var(--green);
     }
@@ -462,5 +471,9 @@ footer > .author-card {
     .contact-area-header > * {
         text-align: left;
         padding: 2rem 5rem 0 0;
+    }
+    footer {
+        padding-left: 10rem;
+        padding-right: 10rem;
     }
 }
