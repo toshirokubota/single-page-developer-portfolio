@@ -98,7 +98,7 @@ h2 {
 
 .intro-area {
     margin: -5em 0.5em 2em 0.5em;
-    padding-bottom: 3em;
+    padding-bottom: 6em;
     border-bottom: solid 1pt var(--lightest);
 }
 .portrait {
@@ -332,6 +332,7 @@ footer > .author-card {
         width: 100%;
     }
     .intro-area {
+        padding-bottom: 3em;
         position: relative;
     }
     .skill-area, .project-area, header {
@@ -360,7 +361,7 @@ footer > .author-card {
     .narrative {
         width: 65%;
         position: absolute;
-        bottom: 3em;
+        bottom: 120px;
         /* left: 5%; */
         text-align: left;
         margin-left: 1em;
@@ -407,6 +408,9 @@ footer > .author-card {
         font-size: 88px;
         line-height: 88px;
         letter-spacing: -2.5px;
+    }
+    .intro-area {
+        padding-bottom: 5em;
     }
     .portrait > .circle-pattern {
         top: 70%;
